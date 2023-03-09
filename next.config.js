@@ -2,7 +2,7 @@
 const { withSentryConfig } = require('@sentry/nextjs')
 const { withAxiom } = require('next-axiom')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+  enabled: process.env.ANALYZE === 'false',
 })
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin')
 const withTM = require('next-transpile-modules')(['@pancakeswap/uikit', '@pancakeswap/sdk'])
@@ -17,8 +17,8 @@ const sentryWebpackPluginOptions =
         // recommended:
         //   release, url, org, project, authToken, configFile, stripPrefix,
         //   urlPrefix, include, ignore
-        silent: true, // Logging when deploying to check if there is any problem
-        validate: false,
+        silent: false, // Logging when deploying to check if there is any problem
+        validate: true,
         // For all available options, see:
         // https://github.com/getsentry/sentry-webpack-plugin#options.
       }
