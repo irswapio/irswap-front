@@ -2,7 +2,7 @@
 const { withSentryConfig } = require('@sentry/nextjs')
 const { withAxiom } = require('next-axiom')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'false',
+  enabled: process.env.ANALYZE === 'true',
 })
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin')
 const withTM = require('next-transpile-modules')(['@pancakeswap/uikit', '@pancakeswap/sdk'])
