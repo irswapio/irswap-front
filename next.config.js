@@ -2,7 +2,7 @@
 const { withSentryConfig } = require('@sentry/nextjs')
 const { withAxiom } = require('next-axiom')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true',
+  enabled: false,
 })
 const { createVanillaExtractPlugin } = require('@vanilla-extract/next-plugin')
 const withTM = require('next-transpile-modules')(['@pancakeswap/uikit', '@pancakeswap/sdk'])
@@ -10,7 +10,7 @@ const withTM = require('next-transpile-modules')(['@pancakeswap/uikit', '@pancak
 const withVanillaExtract = createVanillaExtractPlugin()
 
 const sentryWebpackPluginOptions =
-  process.env.VERCEL_ENV === 'production'
+  process.env.VERCEL_ENV !== 'production'
     ? {
         // Additional config options for the Sentry Webpack plugin. Keep in mind that
         // the following options are set automatically, and overriding them is not
