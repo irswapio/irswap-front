@@ -8,6 +8,7 @@ import { INFO_CLIENT_WITH_CHAIN } from '../config/constants/endpoints'
 export const getGQLHeaders = (endpoint: string) => {
   if (endpoint === INFO_CLIENT) {
     return {
+      'Access-Control-Allow-Origin': "*",
       'X-Sf':
         process.env.NEXT_PUBLIC_SF_HEADER ||
         // hack for inject CI secret on window
@@ -32,6 +33,7 @@ export const infoStableSwapClient = new GraphQLClient(STABLESWAP_SUBGRAPH_CLIENT
 export const infoServerClient = new GraphQLClient(INFO_CLIENT, {
   headers: {
     'X-Sf': process.env.SF_HEADER,
+    'Access-Control-Allow-Origin': "*"
   },
   timeout: 5000,
 })
@@ -44,6 +46,7 @@ export const bitQueryServerClient = new GraphQLClient(BIT_QUERY, {
   headers: {
     // only server, no `NEXT_PUBLIC` not going to expose in client
     'X-API-KEY': process.env.BIT_QUERY_HEADER,
+    'Access-Control-Allow-Origin': "*"
   },
   timeout: 5000,
 })
