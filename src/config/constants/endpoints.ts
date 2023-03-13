@@ -22,7 +22,6 @@ export const INFO_CLIENT = 'https://proxy-worker.pancake-swap.workers.dev/bsc-ex
 export const INFO_CLIENT_ETH = 'https://api.thegraph.com/subgraphs/name/pancakeswap/exhange-eth'
 export const BLOCKS_CLIENT = 'https://api.thegraph.com/subgraphs/name/pancakeswap/blocks'
 export const BLOCKS_CLIENT_ETH = 'https://api.thegraph.com/subgraphs/name/blocklytics/ethereum-blocks'
-
 export const STABLESWAP_SUBGRAPH_CLIENT = 'https://api.thegraph.com/subgraphs/name/pancakeswap/exchange-stableswap'
 export const GRAPH_API_NFTMARKET = 'https://api.thegraph.com/subgraphs/name/pancakeswap/nft-market'
 export const GRAPH_HEALTH = 'https://api.thegraph.com/index-node/graphql'
@@ -34,7 +33,7 @@ export const FARM_API = 'https://farms-api.pancakeswap.com'
 
 export const BIT_QUERY = 'https://graphql.bitquery.io'
 
-export const ACCESS_RISK_API = 'https://red.alert.pancakeswap.com/red-api'
+export const ACCESS_RISK_API = '/api/risk'
 
 export const CELER_API = 'https://api.celerscan.com/scan'
 
@@ -47,3 +46,5 @@ export const BLOCKS_CLIENT_WITH_CHAIN = {
   [ChainId.BSC]: BLOCKS_CLIENT,
   [ChainId.ETHEREUM]: BLOCKS_CLIENT_ETH,
 }
+
+export const ASSET_CDN = 'https://assets.pancakeswap.finance'
