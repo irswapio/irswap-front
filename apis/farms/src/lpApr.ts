@@ -27,7 +27,7 @@ const BLOCKS_CLIENT_WITH_CHAIN = {
 }
 
 const INFO_CLIENT_WITH_CHAIN = {
-  [ChainId.BSC]: 'https://bsc.streamingfast.io/subgraphs/name/pancakeswap/exchange-v2',
+  [ChainId.BSC]: 'https://data-platform.nodereal.io/graph/v1/83fd8451c2ba4d1395eb52c55988483c/projects/pancakeswap',
   [ChainId.ETHEREUM]: 'https://api.thegraph.com/subgraphs/name/pancakeswap/exhange-eth',
   [ChainId.BSC_TESTNET]: '',
   [ChainId.GOERLI]: '',
